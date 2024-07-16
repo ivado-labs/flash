@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'release/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+        poetry-version: ["1.8.1"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python, Poetry and Dependencies
+        uses: packetcoders/action-setup-cache-python-poetry@v1.2.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          poetry-version: ${{ matrix.poetry-version }}
+
+      - name: Cache pre-commits
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit/
+          key: pre-commit-cache|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Run pre-commits
+        run: |
+          poetry run pre-commit install --hook-type commit-msg
+          git diff --name-only origin/${{ github.event.pull_request.base.ref || 'main' }} | xargs -d '\n' poetry run pre-commit run --files
+
+      - name: Run Tests
+        run: make coverage
+
+      - name: Create Coverage Badge
+        uses: tj-actions/coverage-badge-py@v2
+        id: coverage-badge-py
+
+      - name: Verify Coverage Badge Changed
+        uses: tj-actions/verify-changed-files@v20
+        id: verify-changed-files
+        with:
+          files: coverage.svg
+
+      - name: Commit Coverage Badge
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          git config --local user.email "project.template@ivadolabs.com"
+          git config --local user.name "bot-project-template"
+          git add coverage.svg
+          git commit -m "chore: Updated coverage.svg"
+
+      - name: Push Coverage Badge
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PROJECT_TEMPLATE_BOT_TOKEN }}
+          branch: ${{ github.HEAD_REF }}
+          force: true

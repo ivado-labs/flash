@@ -1,0 +1,102 @@
+[tool.poetry]
+name = "project-name"
+version = "v0.0.0"
+description = "REPLACE ME"
+authors = ["Ivado Labs"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pre-commit = "^3.7.0"
+pytest = "^8.2.2"
+coverage = "^7.5.4"
+gitlint = "0.19.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "UP",   # pyupgrade
+    "PGH",  # pygrep-hooks
+    "ANN",  # flake8-annotations
+    "S",    # flake8-bandit
+    "C4",   # flake8-comprehensions rules
+    "A",    # flake8-builtins
+    "PTH",  # flake8-use-pathlib (over os)
+    "COM",  # flake8-commas
+    "ICN",  # flake8-import-conventions
+    "T20",  # flake8-print
+    "SIM",  # flake8-simplify
+    "B",    # flake8-boolean-trap
+    "DTZ",  # flake8-datetimez
+    "T10",  # flake8-debugger
+    "RET",  # flake8-return
+    "FA",   # flake8-future-annotations
+    "ISC",  # flake8-implicit-str-concat
+    "PIE",  # flake8-pie
+    "PYI",  # flake8-pyi
+    "RSE",  # flake8-raise
+    "PD",   # pandas
+    "NPY",  # numpy
+    "C90",  # mccabe
+    "ERA",  # eradicate (removes commented-out code from Python files)
+    "D",    # pydocstyle
+    "N",    # pep8-naming
+    "PL",   # Pylint
+    "FLY",  # flynt
+    "PERF", # Perflint
+
+    # Cherry-pick Ruff-specific rules
+    "RUF005",   # collection-literal-concatenation
+    "RUF010",   # explicit-f-string-type-conversion
+    "RUF015",   # unnecessary-iterable-allocation-for-first-element
+    "RUF100",   # unused-noqa
+    "Q004",     # flake8-quotes (Only rule compatible with formatter)
+    "TID252",   # relative-imports
+]
+extend-safe-fixes = ["C4"]
+extend-ignore = [
+    "ANN10",    # Ignore missing type annotation for self & cls in methods
+    "D414",     # empty-docstring-section
+    "D10",      # Missing docstring
+    # The following rules are disabled because they are not compatible with the formatter.
+    # See https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",     # Indentation contains tabs
+    "E111",     # Indentation with invalid number of spaces
+    "E114",     # Indentation with invalid number of spaces for comments
+    "E117",     # Over-indented
+    "D206",     # Indentation contains tabs for docstrings
+    "D300",     # Use """triple double quotes""" instead of '''triple single quotes'''
+    "COM812",   # Missing trailing comma
+    "COM819",   # Removes unnecessary trailing commas
+    "ISC001",   # Implicit string concatenation
+    "ISC002",   # Multi-line implicit string concatenation
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]    # Unused imports
+"tests/**.py" = ["S101"]            # Use of `assert` detected
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.flake8-annotations]
+mypy-init-return = true             # Return type on __init__
+suppress-none-returning = true      # Missing "-> None"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"       # Disallow all relative imports

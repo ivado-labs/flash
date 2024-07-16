@@ -1,0 +1,64 @@
+name: Hotfix
+
+on:
+  push:
+    branches:
+      - 'release/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        poetry-version: ["1.8.1"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: ${{ matrix.poetry-version }}
+
+      - name: Create a new commit for tagging
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit --allow-empty -m "Release automated commit: [skip ci]"
+
+      - name: Bump version
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          release_branches: ${{ github.REF_NAME }}
+          dry_run: true
+
+      - name: Update pyproject.toml and .version
+        run: |
+          poetry version ${{ steps.tag_version.outputs.new_tag }}
+          echo ${{ steps.tag_version.outputs.new_tag }} > .version
+
+      - name: Commit pyproject.toml and .version
+        run: |
+          git add .version pyproject.toml
+          git commit --amend --no-edit
+
+      - name: Tag
+        run: |
+          git tag ${{ steps.tag_version.outputs.new_tag }}
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.REF_NAME }}
+          tags: true
+
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}

@@ -1,0 +1,8 @@
+.
+:!docs
+:!Makefile
+:!pyproject.toml
+:!poetry.toml
+:!.pre-commit-config.yaml
+:!.github/*
+!:.gitlint

@@ -1,0 +1,29 @@
+name: Sync Template
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"  # at 00:00 on Mondays
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PROJECT_TEMPLATE_BOT_TOKEN }}
+
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v2.2.3
+        with:
+          github_token: ${{ secrets.PROJECT_TEMPLATE_BOT_TOKEN }}
+          git_user_name: bot-project-template
+          git_user_email: project.template@ivadolabs.com
+          source_repo_path: ivado-labs/python-project-template
+          upstream_branch: main
+          pr_title: "Sync with ivado-labs/python-project-template"
