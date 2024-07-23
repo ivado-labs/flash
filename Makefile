@@ -23,7 +23,7 @@ setup: install-python ## Setup the project for the first time
 
 .PHONY: coverage
 coverage: ## Run pytest test coverage
-	poetry run coverage run --source=project_name -m pytest && poetry run coverage report
+	poetry run coverage run --source=flash -m pytest && poetry run coverage report
 
 # automatic Makefile help generator proposed by https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 .PHONY: help
