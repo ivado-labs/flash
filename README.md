@@ -10,7 +10,7 @@
 >
 > Before going forward,
 >
-> - Rename the [project_name](project_name) folder name. Also, apply this rename to the `--source=project_name` argument in the [Makefile](Makefile)'s `coverage` command.
+> - Rename the [project_name](flash) folder name. Also, apply this rename to the `--source=project_name` argument in the [Makefile](Makefile)'s `coverage` command.
 >
 > - Rename the `name` under `tool.poetry` in [pyproject.yml](pyproject.toml).
 >
@@ -28,7 +28,7 @@
 >
 > - Delete this section.
 
-# PROJECT NAME
+# Flash initiative
 ...
 
 ## Install

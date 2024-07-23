@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "project-name"
+name = "flash"
 version = "v0.0.0"
 description = "REPLACE ME"
 authors = ["Ivado Labs"]
@@ -7,11 +7,16 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.10,<3.13"
 pre-commit = "^3.7.0"
 pytest = "^8.2.2"
 coverage = "^7.5.4"
 gitlint = "0.19.1"
+plotly = "^5.22.0"
+jupyter = "^1.0.0"
+kaleido = "0.2.1"
+pycaret = "^3.3.2"
+ydata-profiling = "^4.9.0"
 
 [build-system]
 requires = ["poetry-core"]
