@@ -1,6 +1,4 @@
-# PYCARET Tutorial
-
-The Flash team is excited to share with you a small tutorial on how to use Pycaret.
+# PyCaret
 
 ## What is Pycaret ? 🤔
 
