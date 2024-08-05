@@ -10,7 +10,7 @@ package-mode = false
 python = ">=3.10,<3.13"
 pre-commit = "^3.7.0"
 pytest = "^8.2.2"
-coverage = "^7.5.4"
+coverage = "^7.6.1"
 gitlint = "0.19.1"
 plotly = "^5.22.0"
 jupyter = "^1.0.0"
