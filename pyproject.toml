@@ -17,7 +17,11 @@ jupyter = "^1.0.0"
 kaleido = "0.2.1"
 pycaret = "^3.3.2"
 ydata-profiling = "^4.9.0"
+statsforecast = "^1.7.6"
+mlforecast = "^0.13.3"
 
+
+[tool.pdm]
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -105,3 +109,29 @@ suppress-none-returning = true      # Missing "-> None"
 
 [tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"       # Disallow all relative imports
+
+[project]
+authors = [
+    {name = "Ivado Labs"},
+]
+requires-python = "<3.13,>=3.10"
+dependencies = [
+    "pre-commit<4.0.0,>=3.7.0",
+    "pytest<9.0.0,>=8.2.2",
+    "coverage<8.0.0,>=7.5.4",
+    "gitlint==0.19.1",
+    "plotly<6.0.0,>=5.22.0",
+    "jupyter<2.0.0,>=1.0.0",
+    "kaleido==0.2.1",
+    "pycaret<4.0.0,>=3.3.2",
+    "ydata-profiling<5.0.0,>=4.9.0",
+    "statsforecast<2.0.0,>=1.7.6",
+    "mlforecast<1.0.0,>=0.13.3",
+    "datasetsforecast>=0.0.8",
+    "hierarchicalforecast>=0.4.1",
+]
+name = "flash"
+version = "v0.0.0"
+description = "REPLACE ME"
+readme = "README.md"
+package-mode = false

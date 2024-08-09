@@ -4,34 +4,43 @@
 [![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/)
 ![Coverage](coverage.svg)
 
-> [!IMPORTANT]
->
-> If you want to know the template's full set of features, read [this](docs/TEMPLATE.md).
->
-> Before going forward,
->
-> - Rename the [project_name](flash) folder name. Also, apply this rename to the `--source=project_name` argument in the [Makefile](Makefile)'s `coverage` command.
->
-> - Rename the `name` under `tool.poetry` in [pyproject.yml](pyproject.toml).
->
-> - Rename the [PROJECT NAME](#project-name) in this `README`.
->
-> - Make sure that your GitHub Actions workflow permissions are set to `Read and write` (see `Settings` > `Actions` > `General` > `Workflow permissions` > `Read and write permissions`).
->
-> - Make sure that your GitHub settings Dependabot are enabled (see `Settings` > `Security` > `Code security and analysis` > `Enable them all`).
->
-> - Add the `bot-project-template` user to the project collaborators with `Write` access (see `Settings` > `Access` > `Collaborators and teams`).
->
-> - Modify the [CODEOWNERS](CODEOWNERS) file by adding your team members or GitHub group.
->
-> - To enable GitHub's Slack notifications. Open the development Slack channel of your project (create one if needed). Write `/github subscribe [repository name]`. See [doc](https://github.com/integrations/slack?tab=readme-ov-file#installation) for more details and customization.
->
-> - Delete this section.
-
 # Flash initiative
-...
 
-## Install
+
+The primary objective of the Flash initiative is to equip you with a toolkit that enhances the speed and efficiency of your daily tasks as a Data Scientist!
+
+The tools in our curated list are selected based on couple criteria:
+
+- 👥 Relevance to Ivado Labs projects. Qualitative value: low, medium, high.
+- 👨‍💻 Ease of use/installation. Qualitative value: low, medium, high.
+- 📖 Quality of the available documentation. Qualitative value: low, medium, high.
+- 🥇🥈🥉 (if applicable) Project quality score from [best of ML](https://github.com/ml-tooling/best-of-ml-python) initiative. Quantitative value.
+- ⭐ (if applicable) GitHub Star Count. Quantitative value.
+
+## Tool box
+
+Below is a list of the tool we tested or actively testing:
+
+| Category          | Tool         | Description                                                                                                                   |     Status      | 👥       | 👨‍💻 | 📖 | 🥇🥈🥉 |  ⭐   | Quick tutorial    |
+|-------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------|:---------------:|----------|-----|----|:------:|:----:|----------------------|
+| Auto ML           | PyCaret      | PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows.             |    Tested ✅     |   ⏳ |  ⏳ |  ⏳ |   37   | 8.6K | Available [here](/notebooks/ML/AutoML/PyCaret/README.md) |
+| Time series       | Nixtla       | A set of our open-source libraries, designed to provide a comprehensive, cutting-edge toolkit for time series forecasting.    |  In progress ⏳  |  ⏳  | ⏳ | ⏳ |   34   | 3.6K | Not available yet !     |
+| Data exploration  | Data Wrangler | Data Wrangler is a code-centric data viewing and cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. |  In progress ⏳  |  ⏳  | ⏳|⏳ |  N/A   | N/A  | Not available yet !     |
+| Data manipulation | ydata-quality | An open-source python library for assessing Data Quality throughout the multiple stages of a data pipeline development.       | In progress ⏳   |   ⏳ | ⏳ | ⏳ |  N/A  | 420  |  Not available yet !  |
+
+We also have a couple of tools in our backlog that we are planning to test:
+
+| Category          | Tool         | Description                                                                                                                   |
+|-------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
+| General           | Quatro       | An open-source scientific and technical publishing system.                                                                    |
+
+
+## Contribution
+You have a suggestion or want to contribute to the Flash initiative ?
+
+Don't hesitate to reach out in our Slack channel [#flah-initiative](https://ivadolabscommittee.slack.com/archives/C06QXHPRLMR)!
+
+## Installation steps (WIP)
 
 This project requires the following to be installed:
 - [Poetry](https://python-poetry.org/docs/#installation) to manage dependencies. If you are new to Poetry, please read the [New to Poetry](docs/POETRY.md) documentation.
@@ -46,10 +55,3 @@ For a list of `make` commands, run:
 ```bash
 make help
 ```
-
-## Usage
-...
-
-## Docs
-- [Conventions](docs/CONVENTIONS.md): project code convention to follow.
-- [New to Poetry](docs/POETRY.md): information on what Poetry is and how to use it.
