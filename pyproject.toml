@@ -14,9 +14,13 @@ coverage = "^7.6.1"
 gitlint = "0.19.1"
 plotly = "^5.23.0"
 jupyter = "^1.0.0"
-kaleido = "0.2.1.post1"
+kaleido = "0.2.1"
 pycaret = "^3.3.2"
 ydata-profiling = "^4.9.0"
+mlforecast = "^0.13.3"
+datasetsforecast = "^0.0.8"
+utilsforecast = "^0.2.3"
+statsforecast = "^1.7.6"
 
 [build-system]
 requires = ["poetry-core"]
