@@ -5167,13 +5167,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "utilsforecast"
-version = "0.2.3"
+version = "0.2.5"
 description = "Forecasting utilities"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "utilsforecast-0.2.3-py3-none-any.whl", hash = "sha256:780c11c43aec0d506b314a97d21ce94ca2bd24c4ed8e1db5df2eff2c25989b10"},
-    {file = "utilsforecast-0.2.3.tar.gz", hash = "sha256:c48859a69428628f1787a963599fcf980f9403c57db4b251955707a01af00131"},
+    {file = "utilsforecast-0.2.5-py3-none-any.whl", hash = "sha256:ad41b2e387eaade62e5505086c8a6fd2145805a757079d9796718273950eea4a"},
+    {file = "utilsforecast-0.2.5.tar.gz", hash = "sha256:b69486e17454170cb180fe8a7d19340ac06032c3b03e2119d417ba4d830246d9"},
 ]
 
 [package.dependencies]
@@ -5182,7 +5182,7 @@ packaging = "*"
 pandas = ">=1.1.1"
 
 [package.extras]
-dev = ["datasetsforecast (==0.0.8)", "nbdev", "pandas[plot]", "plotly", "plotly-resampler", "polars[numpy]", "pyarrow", "scipy"]
+dev = ["black", "datasetsforecast (==0.0.8)", "nbdev (<2.3.26)", "numba (>=0.58.0)", "pandas[plot]", "plotly", "plotly-resampler", "polars[numpy]", "pyarrow", "scipy"]
 plotting = ["pandas[plot]", "plotly", "plotly-resampler"]
 polars = ["polars[numpy]"]
 
@@ -5731,4 +5731,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "d6721f4e521b87504399b9837b75e0a34e187872234ea944990449fc7e1fed3d"
+content-hash = "e4eef80ea816eb8f2c5f536c2bf64bca8e681150803e98642202bc26c418c8fa"
