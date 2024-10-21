@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.PROJECT_TEMPLATE_BOT_TOKEN }}
 
       - name: actions-template-sync
-        uses: AndreasAugustin/actions-template-sync@v2.2.3
+        uses: AndreasAugustin/actions-template-sync@v2.4.1
         with:
           github_token: ${{ secrets.PROJECT_TEMPLATE_BOT_TOKEN }}
           git_user_name: bot-project-template
