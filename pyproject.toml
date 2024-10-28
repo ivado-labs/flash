@@ -19,7 +19,7 @@ pycaret = "^3.3.2"
 ydata-profiling = "^4.9.0"
 mlforecast = "^0.13.4"
 datasetsforecast = "^0.0.8"
-utilsforecast = "^0.2.3"
+utilsforecast = "^0.2.7"
 statsforecast = "^1.7.6"
 
 [build-system]
