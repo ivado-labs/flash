@@ -2581,13 +2581,13 @@ files = [
 
 [[package]]
 name = "mlforecast"
-version = "0.13.4"
+version = "0.13.6"
 description = "Scalable machine learning based time series forecasting"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mlforecast-0.13.4-py3-none-any.whl", hash = "sha256:a33be2671e3914f2271deb1a59ab8f50a8c02c617726fdc3232c4f38fdb4e992"},
-    {file = "mlforecast-0.13.4.tar.gz", hash = "sha256:ca55bd7ed1a167f7c6d23554816aa539e2f678a4758d11be7fad7a288f815ee6"},
+    {file = "mlforecast-0.13.6-py3-none-any.whl", hash = "sha256:6558298438ea6eb01e8e2f361bc965bf1e72821df693b871dede7c54649c63ba"},
+    {file = "mlforecast-0.13.6.tar.gz", hash = "sha256:bfe693fa260dba0df325b6fc270ccbd6c055152a7d5871467038403efeb21adb"},
 ]
 
 [package.dependencies]
@@ -2599,7 +2599,7 @@ optuna = "*"
 packaging = "*"
 pandas = "*"
 scikit-learn = "*"
-utilsforecast = ">=0.1.9"
+utilsforecast = ">=0.2.3"
 window-ops = "*"
 
 [package.extras]
@@ -5731,4 +5731,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "d6721f4e521b87504399b9837b75e0a34e187872234ea944990449fc7e1fed3d"
+content-hash = "77bfc73d31632014e9dfa9db2cce031c58d933a772fde51c04756bddd4676a60"
