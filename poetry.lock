@@ -4760,13 +4760,32 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statsforecast"
-version = "1.7.6"
+version = "2.0.0"
 description = "Time series forecasting suite using statistical models"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "statsforecast-1.7.6-py3-none-any.whl", hash = "sha256:a9d39ef0303788063562737912db79c84047177c9b2ac68a9c95c36d7b499028"},
-    {file = "statsforecast-1.7.6.tar.gz", hash = "sha256:fd956802e72039d9ac8833cfe693dbeef90c939132bf56984d312a2866fbd8ce"},
+    {file = "statsforecast-2.0.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:ef7f2e97cdb0bc62561eacf6661fcbd05ebb997246ca850a8c736b01d17115a0"},
+    {file = "statsforecast-2.0.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4f461160d08a73795c13e52a3eb2ba6fb234d2be8ef875c44149b887e0122a37"},
+    {file = "statsforecast-2.0.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2262b805b1f9cc7b72de0e9883cdcf857c8de86f26fb8dc2aac8cd91ae27a553"},
+    {file = "statsforecast-2.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:442ff2a076072c9cd2e0729741d5c86cce397ad387efee6b1608730ab7cbd440"},
+    {file = "statsforecast-2.0.0-cp310-cp310-win_amd64.whl", hash = "sha256:125d4a9ad6a69f5600bc2df276c1b875236cfdb0c0044deeac45dd488d167c94"},
+    {file = "statsforecast-2.0.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:b50a6f917342a62f86e0673d2ddc37022d8cc084080942fd50f17270e3d3eff9"},
+    {file = "statsforecast-2.0.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:2c2990c5b409061c1c658ecf5c44dd508c365d52e0447d5a10df8428ecfb6b99"},
+    {file = "statsforecast-2.0.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5c0c8a10fb594b4187d1c0609d6d37ffac519628673ade0c1e7113ebb9de9269"},
+    {file = "statsforecast-2.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:55a4ca778e7c3df583da2b0eb74a72f9fef44f6789112dca6c1167e71815b05b"},
+    {file = "statsforecast-2.0.0-cp311-cp311-win_amd64.whl", hash = "sha256:e923c86a0368b3b1a5fbde1c0bdfa0f6d07fd97aafaee0dc866d9c887edc1081"},
+    {file = "statsforecast-2.0.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:8a15cec36962763e35fb04e4721d2e7e58629785ab74dacdebc6aab9a81492e6"},
+    {file = "statsforecast-2.0.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:04e15f8a9222f258437986505bf349da4b1953c6fb7226b3a13103d125e238e1"},
+    {file = "statsforecast-2.0.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:124fd23847f82795484d23620e6111e28742ec44c1dd4f747a87d3092bf120cd"},
+    {file = "statsforecast-2.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a57617376ccc94aa973565136d3c94014323094f2a64c9791b20c99d504bf77a"},
+    {file = "statsforecast-2.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:fd3d947146180536664d8d90f103ab688856267f5de28c576871f252c6973b50"},
+    {file = "statsforecast-2.0.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:0cd3940910be16a7be08d1a9ccddff87ef8ed867f4d9cf63b7ab7171896fc0a4"},
+    {file = "statsforecast-2.0.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:7206a83d1f082538f09de8c5a4f02b9a48c0acf432f9b98016c147468113d64f"},
+    {file = "statsforecast-2.0.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f5f3e4f4a0b3389dd8856005ebfb3b9cb7c97df268701724afde37eb040c1b95"},
+    {file = "statsforecast-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9f442373f7f371d2131e6557da5d9540b89fa65819a2f6bd0b08ee55d6fee1d8"},
+    {file = "statsforecast-2.0.0-cp39-cp39-win_amd64.whl", hash = "sha256:e26c1b981e2c6967aa20b84d1009639ba2df1b1c9a6bdc583a002e4ad231bd6a"},
+    {file = "statsforecast-2.0.0.tar.gz", hash = "sha256:7bd7145c1b0abeb672c9d7334d3f8eb51d28c9ce61465a3321d375c3f099c6b9"},
 ]
 
 [package.dependencies]
@@ -4778,17 +4797,17 @@ numpy = ">=1.21.6"
 pandas = ">=1.3.5"
 scipy = ">=1.7.3"
 statsmodels = ">=0.13.2"
-threadpoolctl = "*"
+threadpoolctl = ">=3"
 tqdm = "*"
 utilsforecast = ">=0.1.4"
 
 [package.extras]
-all = ["black", "datasetsforecast", "fire", "fugue[dask] (>=0.8.1)", "fugue[ray] (>=0.8.1)", "fugue[spark] (>=0.8.1)", "nbdev", "nbdev-plotly", "nbformat", "numpy (<2)", "pandas (<2.2)", "pandas[plot]", "plotly", "plotly-resampler", "pmdarima", "polars[numpy]", "pre-commit", "prophet", "protobuf (>=3.15.3,<4.0.0)", "pyarrow", "ray (<2.8)", "scikit-learn", "setuptools (<70)", "supersmoother"]
+all = ["black", "datasetsforecast", "fire", "fugue[dask] (>=0.8.1)", "fugue[ray] (>=0.8.1)", "fugue[spark] (>=0.8.1)", "nbdev (==2.3.25)", "nbdev_plotly", "nbformat", "numpy (<2)", "pandas (<2.2)", "pandas[plot]", "plotly", "plotly-resampler", "pmdarima", "polars[numpy]", "polars[numpy]", "pre-commit", "prophet", "protobuf (>=3.15.3,<4.0.0)", "pyarrow", "pybind11", "pytest", "ray (<=2.10)", "scikit-learn", "setuptools (<70)", "supersmoother", "yfinance"]
 dask = ["fugue[dask] (>=0.8.1)"]
-dev = ["black", "datasetsforecast", "fire", "nbdev", "nbdev-plotly", "nbformat", "pandas[plot]", "pmdarima", "polars[numpy]", "pre-commit", "prophet", "pyarrow", "scikit-learn", "setuptools (<70)", "supersmoother"]
+dev = ["black", "datasetsforecast", "fire", "nbdev (==2.3.25)", "nbdev_plotly", "nbformat", "pandas[plot]", "pmdarima", "polars[numpy]", "pre-commit", "prophet", "pyarrow", "pybind11", "pytest", "scikit-learn", "setuptools (<70)", "supersmoother", "yfinance"]
 plotly = ["plotly", "plotly-resampler"]
 polars = ["polars[numpy]"]
-ray = ["fugue[ray] (>=0.8.1)", "numpy (<2)", "pandas (<2.2)", "protobuf (>=3.15.3,<4.0.0)", "ray (<2.8)"]
+ray = ["fugue[ray] (>=0.8.1)", "numpy (<2)", "pandas (<2.2)", "protobuf (>=3.15.3,<4.0.0)", "ray (<=2.10)"]
 spark = ["fugue[spark] (>=0.8.1)"]
 
 [[package]]
@@ -5731,4 +5750,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "4634c77f93770a8c2645605db3423e6ecb3eff799378ff810d1a21c0690afa25"
+content-hash = "4d09f52ce85701f14054a5ebe90a132fc061787d7aceab792515e23f55227bb6"
