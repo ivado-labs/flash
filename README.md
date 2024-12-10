@@ -22,18 +22,18 @@ The tools in our curated list are selected based on a couple of criteria:
 
 Below is a list of the tools we tested or are actively testing:
 
-| Category          | Tool         | Description                                                                                                                   |     Status      | 👥       | 👨‍💻 | 📖 | 🥇🥈🥉 |  ⭐   | Quick tutorial    |
-|-------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------|:---------------:|----------|-----|----|:------:|:----:|----------------------|
-| Auto ML           | PyCaret      | PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows.             |    Tested ✅     |   High |  High |  High |   37   | 8.6K | Available [here](./notebooks/ML/AutoML/PyCaret/README.md) |
-| Time series       | Nixtla       | A set of our open-source libraries designed to provide a comprehensive, cutting-edge toolkit for time series forecasting.    |  Tested ✅    | High | High | Medium |   34   | 3.6K |Available [here](./notebooks/ML/NixtlaREADME.md) |    |
-| Data exploration  | Data Wrangler | Data Wrangler is a code-centric data viewing and cleaning tool integrated into VS Code and VS Code Jupyter Notebooks. |  In progress ⏳  |  ⏳  | ⏳|⏳ |  N/A   | N/A  | Not available yet !     |
-| Data manipulation | ydata-quality | An open-source Python library for assessing Data Quality throughout the multiple stages of a data pipeline development.       | In progress ⏳   |   ⏳ | ⏳ | ⏳ |  N/A  | 420  |  Not available yet !  |
+| Category          | Tool         | Description                                                                                                               |     Status      | 👥       | 👨‍💻 | 📖 | 🥇🥈🥉 |  ⭐   | Quick tutorial    |
+|-------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|:---------------:|----------|-----|----|:------:|:----:|----------------------|
+| Data Exploration | ydata-profilling | An open-source Python library used to generate an exploratory data analysis (EDA) report with just a few lines of code.|    Tested ✅     |   High |  High |  Medium |   35   | 13K  | Available [here](./notebooks/EDA/pandas-profiling/README.md) |
+| Auto ML           | PyCaret      | PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows.         |    Tested ✅     |   High |  High |  High |   37   | 8.6K | Available [here](./notebooks/ML/AutoML/PyCaret/README.md) |
+| Time series       | Nixtla       | A set of our open-source libraries designed to provide a comprehensive, cutting-edge toolkit for time series forecasting. |  Tested ✅    | High | High | Medium |   34   | 3.6K |Available [here](./notebooks/ML/NixtlaREADME.md) |    |
+| Data exploration  | Data Wrangler | Data Wrangler is a code-centric data viewing and cleaning tool integrated into VS Code and VS Code Jupyter Notebooks.     |  In progress ⏳  |  ⏳  | ⏳|⏳ |  N/A   | N/A  | Not available yet !     |
+| Data manipulation | ydata-quality | An open-source Python library for assessing Data Quality throughout the multiple stages of a data pipeline development.   | In progress ⏳   |   ⏳ | ⏳ | ⏳ |  N/A   | 420  |  Not available yet !  |
 
 We also have a couple of tools in our backlog that we are planning to test:
 
 | Category         | Tool             | Description                                                                             |
 |------------------|------------------|-----------------------------------------------------------------------------------------|
-| Data Exploration | ydata-profilling | An open-source Python library for Data quality profiling and exploratory data analysis. |
 | General          | Quatro           | An open-source scientific and technical publishing system.                              |
 
 
