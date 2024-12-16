@@ -37,12 +37,7 @@ We also have a couple of tools in our backlog that we are planning to test:
 | General          | Quatro           | An open-source scientific and technical publishing system.                              |
 
 
-## Contribution
-You have a suggestion or want to contribute to the Flash initiative?
-
-Don't hesitate to reach out in our Slack channel [#flash-initiative](https://ivadolabscommittee.slack.com/archives/C06QXHPRLMR)!
-
-## Installation steps (WIP)
+## Setup
 
 This project requires the following to be installed:
 - [Poetry](https://python-poetry.org/docs/#installation) to manage dependencies. If you are new to Poetry, please read the [New to Poetry](docs/POETRY.md) documentation.
@@ -57,3 +52,22 @@ For a list of `make` commands, run:
 ```bash
 make help
 ```
+
+## Contribution
+You have a suggestion or want to contribute to the Flash initiative?
+
+Don't hesitate to reach out in our Slack channel [#flash-initiative](https://ivadolabscommittee.slack.com/archives/C06QXHPRLMR)!
+
+> [!IMPORTANT]
+> When creating a new branch, if you get this error :
+> ```bash
+> <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>
+> ```
+> Run the following:
+> ```bash
+> export SSL_CERT_FILE=$(poetry run python -c "import certifi; print(certifi.where())")
+> echo 'export SSL_CERT_FILE=$(poetry run python -c "import certifi; print(certifi.where())")' >> ~/.zshrc
+> poetry run pre-commit clean
+> poetry run pre-commit install
+> poetry run pre-commit run
+> ```
