@@ -54,9 +54,14 @@ make help
 ```
 
 ## Contribution
-You have a suggestion or want to contribute to the Flash initiative?
 
-Don't hesitate to reach out in our Slack channel [#flash-initiative](https://ivadolabscommittee.slack.com/archives/C06QXHPRLMR)!
+Contributions are encouraged and always welcome!
+
+If you want to add a new tool, you can:
+- Duplicate the [README](notebooks/TEMPLATE/README.md) and [introduction notebook](notebooks/TEMPLATE/intro_tutorial.ipynb) in the appropriate folder.
+- Fill up those files and submit a pull request.
+
+You have a suggestion or want to contribute to the Flash initiative? Don't hesitate to reach out in our Slack channel [#flash-initiative](https://ivadolabscommittee.slack.com/archives/C06QXHPRLMR)!
 
 > [!IMPORTANT]
 > When creating a new branch, if you get this error :
